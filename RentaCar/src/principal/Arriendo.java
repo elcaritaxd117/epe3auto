@@ -7,6 +7,7 @@ package principal;
 
 import gestionBD.GestionBD;
 import java.util.Date;
+import javax.swing.ImageIcon;
 import javax.swing.table.DefaultTableModel;
 import metodos.folio;
 
@@ -82,6 +83,11 @@ GestionBD rl = new GestionBD();
         jButton7 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Arriendo Vehiculo"));
 
@@ -581,6 +587,11 @@ GestionBD rl = new GestionBD();
         
         
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+    ImageIcon favicon = new ImageIcon("src/car-favicon.png");         
+        setIconImage(favicon.getImage());        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
