@@ -46,7 +46,7 @@ public class Principal extends javax.swing.JFrame {
         btnguardacambiosauto.setVisible(false);
        
        this.setLocationRelativeTo(null); //centrar formulario
-       this.setTitle("byRLS");
+       this.setTitle("RENTACAR V1.0");
     GestionBD rl = new GestionBD();
     
     rl.crearBD();

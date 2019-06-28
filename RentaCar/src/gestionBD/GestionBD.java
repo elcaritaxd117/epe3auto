@@ -163,11 +163,12 @@ public class GestionBD {
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
-            JOptionPane.showMessageDialog(null,"Cliente ingresado con Exito");
+                        JOptionPane.showMessageDialog (null, "Cliente ingresado", "Atencion", JOptionPane.WARNING_MESSAGE);
+
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-            JOptionPane.showMessageDialog(null,"Rut ya Existe en la BD vuelve a ingresar un Rut distinto"+ e);
+            JOptionPane.showMessageDialog(null,"Rut ya Existe en la BD vuelve a ingresar un Rut distinto","error",JOptionPane.ERROR_MESSAGE);
         }
 
  }    
@@ -193,6 +194,8 @@ public class GestionBD {
             conexion.close();
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -215,7 +218,9 @@ public class GestionBD {
          
             
         } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("Error:"+ e.getMessage());
+             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -234,7 +239,9 @@ public class GestionBD {
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-            JOptionPane.showMessageDialog(null,"Rut NO  Existe en la BD vuelva a intentarlo nuevamente "+ e);
+            JOptionPane.showMessageDialog(
+        null, "error: "+e.getMessage(), "Rut NO  Existe en la BD vuelva a intentarlo nuevamente ", JOptionPane.ERROR_MESSAGE);
+            
         }
 
  }  
@@ -249,11 +256,12 @@ public class GestionBD {
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
-            JOptionPane.showMessageDialog(null,"Cliente Eliminadoo con Exito");
+            JOptionPane.showMessageDialog (null, "Cliente eliminado", "Informacion", JOptionPane.WARNING_MESSAGE);
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-            JOptionPane.showMessageDialog(null,"Rut NO  Existe en la BD vuelva a intentarlo nuevamente "+ e);
+            JOptionPane.showMessageDialog(
+        null, "error: "+e.getMessage(), "RUT NO EXISTE EN LA BD, INTENTELO NUEVAMENTE", JOptionPane.ERROR_MESSAGE);
         }
 
  } 
@@ -312,11 +320,13 @@ public class GestionBD {
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
-            JOptionPane.showMessageDialog(null,"VEHICULO ingresado con Exito");
+                       JOptionPane.showMessageDialog (null, "Exito", "Vehiculo ingresado con éxito", JOptionPane.INFORMATION_MESSAGE);
+
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-            JOptionPane.showMessageDialog(null,"ERROR AL INGRESAR EL AUTO"+ e);
+            JOptionPane.showMessageDialog(
+        null, "Error al ingresar AUTO", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
  }
@@ -344,6 +354,8 @@ public class GestionBD {
             conexion.close();
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -375,6 +387,8 @@ public class GestionBD {
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -389,11 +403,12 @@ public class GestionBD {
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
-            JOptionPane.showMessageDialog(null,"VEHICULO Modificado con Exito");
+            JOptionPane.showMessageDialog(null,"VEHICULO Modificado con Exito","Atención",JOptionPane.WARNING_MESSAGE);
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-            JOptionPane.showMessageDialog(null,"VEHICULO  NO  Existe en la BD vuelva a intentarlo nuevamente "+ e);
+            JOptionPane.showMessageDialog(
+        null, "Auto no existen en la BD ", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
  }  
@@ -408,11 +423,12 @@ public class GestionBD {
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
-            JOptionPane.showMessageDialog(null,"VEHICULO Eliminadoo con Exito");
+            JOptionPane.showMessageDialog(null,"VEHICULO Eliminadoo con Exito","Atención",JOptionPane.WARNING_MESSAGE);
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-            JOptionPane.showMessageDialog(null,"VEHICULO NO  Existe en la BD vuelva a intentarlo nuevamente "+ e);
+           JOptionPane.showMessageDialog(
+        null, "Vehiculo no existe en la BD intentelo nuevamente" ,"Error", JOptionPane.ERROR_MESSAGE);
         }
 
  } 
@@ -437,6 +453,8 @@ public class GestionBD {
             conexion.close();
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -484,6 +502,8 @@ public class GestionBD {
             conexion.close();
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }   
@@ -504,6 +524,8 @@ public class GestionBD {
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -524,7 +546,8 @@ public class GestionBD {
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-            JOptionPane.showMessageDialog(null,"ERROR AL INGRESAR EL CONTRATO"+ e);
+            JOptionPane.showMessageDialog(
+        null, "Error al ingresar el Contrato", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
  }
@@ -545,6 +568,8 @@ public class GestionBD {
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -579,6 +604,8 @@ public class GestionBD {
             conexion.close();
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }   
@@ -596,11 +623,12 @@ public void modificarEstado(String PPU,  String ESTADO)  {
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
-            JOptionPane.showMessageDialog(null,"ESTADO Modificado con Exito");
+            JOptionPane.showMessageDialog(null,"ESTADO Modificado con Exito","Atención",JOptionPane.WARNING_MESSAGE);
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-            JOptionPane.showMessageDialog(null,"ESTADO  NO  Existe en la BD vuelva a intentarlo nuevamente "+ e);
+            JOptionPane.showMessageDialog(
+        null, "Estado no existe en la BD","Error", JOptionPane.ERROR_MESSAGE);
         }
 
  }  
@@ -628,6 +656,8 @@ public void modificarEstado(String PPU,  String ESTADO)  {
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }
@@ -647,11 +677,12 @@ public void modificarEstado(String PPU,  String ESTADO)  {
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
-            JOptionPane.showMessageDialog(null,"Cliente ingresado con Exito");
+            JOptionPane.showMessageDialog(null,"Cliente ingresado con Exito","Atención",JOptionPane.WARNING_MESSAGE);
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-            JOptionPane.showMessageDialog(null,"Rut ya Existe en la BD vuelve a ingresar un Rut distinto"+ e);
+            JOptionPane.showMessageDialog(
+        null, "Rut ya existe en la BD", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
 
  }   

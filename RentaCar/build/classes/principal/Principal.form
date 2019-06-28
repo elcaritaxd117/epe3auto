@@ -78,7 +78,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="17" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -406,7 +406,7 @@
                                   <Component id="btnlimpiarcli" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
                                   <Component id="btnaceptarcli" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="btnguardacambio" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -420,7 +420,7 @@
                                       <Component id="txttelefonocli" alignment="1" min="-2" pref="263" max="-2" attributes="0"/>
                                       <Component id="txtcorreocli" alignment="1" min="-2" pref="263" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="67" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="btnverificacli" min="-2" max="-2" attributes="0"/>
                                       <Component id="btnborrarcli" min="-2" max="-2" attributes="0"/>
@@ -714,7 +714,7 @@
                                           <Component id="check_jeep" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="check_camioneta" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
