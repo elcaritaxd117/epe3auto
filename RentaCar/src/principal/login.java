@@ -5,6 +5,7 @@
  */
 package principal;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import metodos.Metodos;
 import principal.Principal;
@@ -40,6 +41,11 @@ public class login extends javax.swing.JFrame {
         txtpass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Identificación"));
 
@@ -145,6 +151,11 @@ public class login extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_btnentrarActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+ImageIcon favicon = new ImageIcon("src/car-favicon.png");         
+        setIconImage(favicon.getImage());        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments

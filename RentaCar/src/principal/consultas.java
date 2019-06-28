@@ -6,6 +6,7 @@
 
 package principal;
 import gestionBD.GestionBD;
+import javax.swing.ImageIcon;
 /**
  *
  * @author Girona 03
@@ -52,6 +53,11 @@ public class consultas extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Consulta todos los datos"));
 
@@ -342,7 +348,7 @@ public class consultas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        
             rl.mostrarTODO(tablatodo);
        
 
@@ -371,6 +377,7 @@ public class consultas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+<<<<<<< HEAD
         // TODO add your handling code here:
             
         rl.mostrarDEVOLUCION(tabladevolucion);
@@ -380,6 +387,16 @@ public class consultas extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
+=======
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+    ImageIcon favicon = new ImageIcon("src/car-favicon.png");         
+        setIconImage(favicon.getImage());        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowActivated
+
+>>>>>>> f38bcab7079e582f2810d4dbf2f5ba175fb0294e
     /**
      * @param args the command line arguments
      */
