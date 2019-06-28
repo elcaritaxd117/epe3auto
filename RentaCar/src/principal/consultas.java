@@ -377,17 +377,17 @@ public class consultas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-<<<<<<< HEAD
+
         // TODO add your handling code here:
-            
+        {
         rl.mostrarDEVOLUCION(tabladevolucion);
 
 
 
 
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }                                        
 
-=======
+
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -396,7 +396,6 @@ public class consultas extends javax.swing.JFrame {
         setIconImage(favicon.getImage());        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
 
->>>>>>> f38bcab7079e582f2810d4dbf2f5ba175fb0294e
     /**
      * @param args the command line arguments
      */
