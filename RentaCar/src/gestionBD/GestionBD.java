@@ -710,7 +710,67 @@ public void modificarEstado(String PPU,  String ESTADO)  {
 
  }   
     
+   
+
+public void mostrarAUTOCATEGORIA(JTable jtableautos)  {
+        try {
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            sentencia = conexion.createStatement();
+            String sql = "SELECT * FROM VEHICULO JOIN CATEGORIA ON VEHICULO.ID_CAT= CATEGORIA.ID_CAT";
+            resultados = sentencia.executeQuery(sql);
+            int fila=0;
+            while(resultados.next()){
+                    jtableautos.setValueAt(resultados.getString("PPU"), fila,0);
+                        jtableautos.setValueAt(resultados.getString("MARCA"), fila,1);
+                jtableautos.setValueAt(resultados.getString("MODELO"), fila,2);
+                jtableautos.setValueAt(resultados.getString("AÑO"), fila,3);
+                jtableautos.setValueAt(resultados.getString("COLOR"), fila,4);
+                jtableautos.setValueAt(resultados.getString("NOMBRE_CAT"), fila,5);
+             
+                fila++;
+            }
+           
+            sentencia.close();
+            conexion.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
     } 
+public void mostrarDEVOLUCION(JTable jtableautos)  {
+        try {
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            sentencia = conexion.createStatement();
+            String sql = "SELECT * FROM DEVOLUCION";
+            resultados = sentencia.executeQuery(sql);
+            int fila=0;
+            while(resultados.next()){
+                jtableautos.setValueAt(resultados.getString("FOLIO_DEV"), fila,0);
+                jtableautos.setValueAt(resultados.getString("PPU"), fila,1);
+                jtableautos.setValueAt(resultados.getString("RUT_CLI"), fila,2);
+                jtableautos.setValueAt(resultados.getString("FECHA_DEV"), fila,3);
+               
+             
+                fila++;
+            }
+           
+            sentencia.close();
+            conexion.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    } 
+
+
+
+} 
     
     
   

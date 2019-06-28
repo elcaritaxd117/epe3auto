@@ -41,13 +41,13 @@ public class consultas extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tablautocategoria = new javax.swing.JTable();
         jButton5 = new javax.swing.JButton();
         btnclienteauto = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tabladevolucion = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -138,24 +138,23 @@ public class consultas extends javax.swing.JFrame {
 
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Consulta todos los datos"));
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tablautocategoria.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7", "Title 8", "Title 9", "Title 10", "Title 11", "Title 12", "Title 13"
+                "PATENTE", "MARCA", "MODELO", "AÑO", "COLOR", "CATEGORIA"
             }
         ));
-        jScrollPane3.setViewportView(jTable3);
+        jScrollPane3.setViewportView(tablautocategoria);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -238,26 +237,23 @@ public class consultas extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Clientes/auto", jPanel4);
+        jTabbedPane1.addTab("Categoria -Autos", jPanel4);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Tabla contratos"));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabladevolucion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7"
+                "FOLIO CONTR DEV", "PATENTE", "RUT CLIENTE", "FECHA DEVOLUCION"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabladevolucion);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -284,6 +280,11 @@ public class consultas extends javax.swing.JFrame {
         });
 
         jButton2.setText("Realizar Consulta");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -311,7 +312,7 @@ public class consultas extends javax.swing.JFrame {
                 .addContainerGap(124, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("autos/categorias", jPanel2);
+        jTabbedPane1.addTab("Devoluciones", jPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -358,7 +359,7 @@ public class consultas extends javax.swing.JFrame {
     private void btnclienteautoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnclienteautoActionPerformed
         // TODO add your handling code here:
 
-
+            rl.mostrarAUTOCATEGORIA(tablautocategoria);
 
 
     }//GEN-LAST:event_btnclienteautoActionPerformed
@@ -368,6 +369,16 @@ public class consultas extends javax.swing.JFrame {
         principal.setVisible(true);
         dispose();         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+            
+        rl.mostrarDEVOLUCION(tabladevolucion);
+
+
+
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -422,9 +433,9 @@ public class consultas extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable3;
+    private javax.swing.JTable tabladevolucion;
     private javax.swing.JTable tablatodo;
+    private javax.swing.JTable tablautocategoria;
     // End of variables declaration//GEN-END:variables
 
 }
