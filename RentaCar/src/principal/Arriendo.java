@@ -105,6 +105,11 @@ GestionBD rl = new GestionBD();
         jButton4.setText("CANCELAR");
 
         jButton5.setText("LIMPIAR");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de Arrendador"));
 
@@ -557,6 +562,25 @@ GestionBD rl = new GestionBD();
 
 
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        foliocont.setText("");
+        rutcont.setText("");
+        nombrecont.setText("");
+        apellidocont.setText("");
+        direccioncont.setText("");
+        telefonocont.setText("");
+        correocont.setText("");
+        fechacont.setDateFormatString("");
+        tablaautocontrato.setToolTipText("");
+        txtprueba.setText("");
+        numdias.setText("");
+        txtvalordia.setText("");
+        fdesde.setToolTipText("");
+        fhasta.setToolTipText("");
+        
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
