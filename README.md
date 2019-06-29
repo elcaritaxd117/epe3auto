@@ -7,3 +7,26 @@ Aplicación que tiene por objetivo ingresar y gestionar arriendo de vehículos :
 # Desarrolladores 
 
 Este programa fue desarrollado por Ricardo Lucero, Sebastian Quiroga, Ernesto Díaz y Diego Arancibia 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ppt terminada
