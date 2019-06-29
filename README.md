@@ -9,7 +9,7 @@ Aplicación que tiene por objetivo ingresar y gestionar arriendo de vehículos :
 Este programa fue desarrollado por Ricardo Lucero, Sebastian Quiroga, Ernesto Díaz y Diego Arancibia 
 
 
-
+(images/car-splash.png)
 
 
 
