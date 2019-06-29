@@ -2,7 +2,7 @@
 
 # Descripción 
 
-Aplicación que tiene por objetivo ingresar y gestionar arriendo de vehículos :car: :car: :car: :blue_car:
+Aplicación que tiene por objetivo ingresar y gestionar arriendo de vehículos :blue_car: :car: :car: :car: :blue_car:
 
 # Desarrolladores 
 
@@ -26,7 +26,6 @@ Este programa fue desarrollado por Ricardo Lucero, Sebastian Quiroga, Ernesto D�
 
 
 
-
-===
+---
 
 ppt terminada
