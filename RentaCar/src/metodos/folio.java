@@ -24,6 +24,8 @@ RentaCar  Copyright (C) 2019  Ricardo Lucero
 */
 package metodos;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author rls
@@ -36,6 +38,13 @@ public class folio {
    idusuario=folio.id++;
    }
    
+   public int obtenfolio(){
+       int rf=idusuario;
+       
+       return rf;
+   
+   
+   }
    public String ToString(){
         String folio= "FOLIO "+idusuario;
         return folio;

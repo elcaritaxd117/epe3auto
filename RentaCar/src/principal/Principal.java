@@ -76,11 +76,12 @@ public class Principal extends javax.swing.JFrame {
     rl.crearBD();
     rl.crearTablaDEVOLUCION();
     rl.crearTablaCategoriaVehiculo();
+     rl.insertDatoCategoria();
     rl.crearTablaCliente();
     rl.crearTablaVehiculo();
     rl.crearTablaContrato();
     
-    rl.insertDatoCategoria();
+   
   
     }
 
@@ -301,7 +302,7 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         jTab1.addTab("CONTRATOS", jPanel1);
@@ -1212,7 +1213,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnguardacambiosautoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardacambiosautoActionPerformed
         // TODO add your handling code here:
-          GestionBD rl = new GestionBD();
+      try{    GestionBD rl = new GestionBD();
           String PPU=txtpatente.getText();
           String MARCA=txtmarca.getText();
           String MODELO=txtmodelo.getText();
@@ -1234,7 +1235,10 @@ public class Principal extends javax.swing.JFrame {
                   
                   
           rl.modificarDatoVehiculo(PPU, MARCA, MODELO, COLOR, AÑO, VALORDIA, ESTADO, ID_CAT);
-
+      }catch (NumberFormatException e){
+      JOptionPane.showMessageDialog(null,"Error"+ e);
+        }
+      
     }//GEN-LAST:event_btnguardacambiosautoActionPerformed
 
     private void btverificavehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btverificavehiculoActionPerformed

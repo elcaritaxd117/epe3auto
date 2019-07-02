@@ -132,7 +132,7 @@ public class GestionBD {
                             "VALORDIA INT NOT NULL,"+
                             "ESTADO TEXT NOT NULL,"+
                             "ID_CAT TEXT NOT NULL,"+
-                            "FOREIGN KEY (ID_CAT)REFERENCES CATEGORIA(ID_CAT))";
+                            "FOREIGN KEY(ID_CAT) REFERENCES CATEGORIA(ID_CAT))";
                 sentencia.executeUpdate(sql);
                 sentencia.close();
             conexion.close();
@@ -159,6 +159,7 @@ public class GestionBD {
                             "FECH_DESDE DATE NOT NULL,"+
                             "FECH_HASTA DATE NOT NULL,"+
                             "VALOR_FINAL INT  NOT NULL,"+
+                            "CONDICION INT  NOT NULL,"+
                             "FOREIGN KEY (RUT_CLI)REFERENCES CLIENTE(RUT),"+
                             "FOREIGN KEY (PPU_CLI)REFERENCES VEHICULO(PPU))";
                 sentencia.executeUpdate(sql);
@@ -388,7 +389,7 @@ public class GestionBD {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             sentencia = conexion.createStatement();
-            String sql = "SELECT * FROM VEHICULO JOIN CONTRATO ON VEHICULO.PPU= CONTRATO.PPU_CLI  JOIN CLIENTE ON CONTRATO.RUT_CLI=CLIENTE.RUT where PPU = '"+PU+"'";
+            String sql = "SELECT * FROM VEHICULO JOIN CONTRATO ON VEHICULO.PPU=CONTRATO.PPU_CLI  JOIN CLIENTE ON CONTRATO.RUT_CLI=CLIENTE.RUT where PPU = '"+PU+"'";
             resultados = sentencia.executeQuery(sql);
             
                marca.setText( resultados.getString("MARCA"));
@@ -404,6 +405,7 @@ public class GestionBD {
                direcd.setText( resultados.getString("DIRECCION"));
                teld.setText( resultados.getString("TELEFONO"));
               cord.setText( resultados.getString("CORREO"));
+              
                sentencia.close();
             conexion.close();
          
@@ -455,8 +457,6 @@ public class GestionBD {
         }
 
  } 
-    
-    
     public void mostraComboEstadoContrato(JComboBox cbox)  {
         try {
             Class.forName(DRIVER);
@@ -503,7 +503,6 @@ public class GestionBD {
         }
 
     }
-    
     public void mostraDatoVehiculoCongtrato(JTable jtableautos)  {
         try {
             Class.forName(DRIVER);
@@ -530,8 +529,7 @@ public class GestionBD {
         }
 
     }   
-        
-     public void mostraVALORVehiculoDIA(JTextField valordia,String PU)  {
+    public void mostraVALORVehiculoDIA(JTextField valordia,String PU)  {
         try {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
@@ -552,16 +550,15 @@ public class GestionBD {
         }
 
     }
-     
-     public void insertDatoCONTRATO(String FOLIO, String FECHA_CONTRATO, String RUT_CLI, String PPU_CLI, int NUM_DIAS, String  FECH_DESDE, String FECH_HASTA, int VALOR_FINAL)  {
+    public void insertDatoCONTRATO(String FOLIO, String FECHA_CONTRATO, String RUT_CLI, String PPU_CLI, int NUM_DIAS, String  FECH_DESDE, String FECH_HASTA, int VALOR_FINAL)  {
       try {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             
             sentencia = conexion.createStatement();
             String sql = "INSERT INTO CONTRATO"+
-                         "(FOLIO,FECHA_CONTRATO,RUT_CLI,PPU_CLI,NUM_DIAS,FECH_DESDE,FECH_HASTA,VALOR_FINAL)"+
-                         "VALUES('"+FOLIO+"','"+FECHA_CONTRATO+"','"+RUT_CLI+"','"+PPU_CLI+"','"+NUM_DIAS+"','"+FECH_DESDE+"','"+FECH_HASTA+"','"+VALOR_FINAL+"')";
+                         "(FOLIO,FECHA_CONTRATO,RUT_CLI,PPU_CLI,NUM_DIAS,FECH_DESDE,FECH_HASTA,VALOR_FINAL,CONDICION)"+
+                         "VALUES('"+FOLIO+"','"+FECHA_CONTRATO+"','"+RUT_CLI+"','"+PPU_CLI+"','"+NUM_DIAS+"','"+FECH_DESDE+"','"+FECH_HASTA+"','"+VALOR_FINAL+"','VIGENTE')";
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
@@ -574,16 +571,15 @@ public class GestionBD {
         }
 
  }
-     
-    public void obtenerFolio(JTextField id )  {
+    public void  obtenerFolio( JTextField txtpr)  {
         try {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             sentencia = conexion.createStatement();
-            String sql = "SELECT FOLIO FROM CONTRATO";
+            String sql = "SELECT FOLIO FROM CONTRATO where rut rut_cli='15778242-8'";
             resultados = sentencia.executeQuery(sql);
             
-               id.setText(resultados.getString("FOLIO"));
+               txtpr.setText(resultados.getString("FOLIO"));
              
               sentencia.close();
             conexion.close();
@@ -596,9 +592,6 @@ public class GestionBD {
         }
 
     }
-  
-    
-    
     public void mostrarTODO(JTable jtableautos)  {
         try {
             Class.forName(DRIVER);
@@ -632,10 +625,7 @@ public class GestionBD {
         }
 
     }   
-    
-    
-    
-public void modificarEstado(String PPU,  String ESTADO)  {
+    public void modificarEstado(String PPU,  String ESTADO)  {
       try {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
@@ -663,7 +653,7 @@ public void modificarEstado(String PPU,  String ESTADO)  {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             sentencia = conexion.createStatement();
-            String sql = "SELECT * FROM VEHICULO JOIN CONTRATO ON VEHICULO.PPU= CONTRATO.PPU_CLI where PPU = '"+PU+"'";
+            String sql = "SELECT * FROM VEHICULO where PPU = '"+PU+"'";
             resultados = sentencia.executeQuery(sql);
             
                marca.setText( resultados.getString("MARCA"));
