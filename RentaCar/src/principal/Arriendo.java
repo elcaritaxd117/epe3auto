@@ -82,7 +82,6 @@ GestionBD rl = new GestionBD();
         fechacont = new com.toedter.calendar.JDateChooser();
         btnregresar = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        txtp = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -366,12 +365,6 @@ GestionBD rl = new GestionBD();
             }
         });
 
-        txtp.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtpActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -400,9 +393,7 @@ GestionBD rl = new GestionBD();
                                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtp, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(foliocont, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -424,9 +415,7 @@ GestionBD rl = new GestionBD();
                             .addComponent(foliocont, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel29))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7)
-                            .addComponent(txtp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton7))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(fechacont, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -609,10 +598,6 @@ GestionBD rl = new GestionBD();
         setIconImage(favicon.getImage());        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
 
-    private void txtpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtpActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -690,7 +675,6 @@ GestionBD rl = new GestionBD();
     private javax.swing.JTextField rutcont;
     private javax.swing.JTable tablaautocontrato;
     private javax.swing.JTextField telefonocont;
-    private javax.swing.JTextField txtp;
     private javax.swing.JTextField txtprueba;
     private javax.swing.JTextField txtvalordia;
     // End of variables declaration//GEN-END:variables

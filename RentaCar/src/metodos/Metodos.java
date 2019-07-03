@@ -1,22 +1,17 @@
 
 package metodos;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+
+import principal.login;
+import gestionBD.GestionBD;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
-import java.util.*;
-
-
 
 public class Metodos {
     
-    
-     //List <String> lista  = new ArrayList<>();
-     //String [][] almacen ;
-     
-    
-   
 
      
     

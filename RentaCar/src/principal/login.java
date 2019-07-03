@@ -214,7 +214,7 @@ ImageIcon favicon = new ImageIcon("src/car-favicon.png");
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField txtpass;
-    private javax.swing.JTextField txtusuario;
+    public static javax.swing.JPasswordField txtpass;
+    public static javax.swing.JTextField txtusuario;
     // End of variables declaration//GEN-END:variables
 }
