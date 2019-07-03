@@ -24,6 +24,7 @@ GestionBD rl = new GestionBD();
     public Arriendo() {
         initComponents();
            this.setLocationRelativeTo(null); //centrar formulario
+           this.setTitle("Arriendo");
            
      
            

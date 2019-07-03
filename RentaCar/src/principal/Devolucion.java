@@ -20,6 +20,7 @@ public class Devolucion extends javax.swing.JFrame {
     public Devolucion() {
         initComponents();
            this.setLocationRelativeTo(null); //centrar formulario
+           this.setTitle("Devolucion");
            jPanel4.setVisible(false);
     }
 

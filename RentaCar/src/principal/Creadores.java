@@ -19,6 +19,7 @@ public class Creadores extends javax.swing.JFrame {
     public Creadores() {
         initComponents();
         this.setLocationRelativeTo(null); //centrar formulario
+        this.setTitle("Creadores");
     }
 
     /**
