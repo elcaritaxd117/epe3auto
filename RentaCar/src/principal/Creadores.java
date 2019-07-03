@@ -51,13 +51,16 @@ public class Creadores extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ricardo.png"))); // NOI18N
+        jLabel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seba.jpg"))); // NOI18N
+        jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/diego.jpg"))); // NOI18N
+        jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
 
         jLabel5.setText("Ricardo Lucero");
 
@@ -68,9 +71,11 @@ public class Creadores extends javax.swing.JFrame {
         jLabel8.setText("Diego Arancibia");
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tito.jpg"))); // NOI18N
+        jLabel9.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, null));
 
         jLabel10.setText("Creadores");
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Volver");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +111,7 @@ public class Creadores extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel9)
                             .addComponent(jLabel1))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -149,7 +154,7 @@ public class Creadores extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addComponent(jLabel4)))
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

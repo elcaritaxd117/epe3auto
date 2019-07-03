@@ -84,14 +84,17 @@ GestionBD rl = new GestionBD();
         jButton7 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 102, 102));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Arriendo Vehiculo"));
 
+        jPanel9.setBackground(new java.awt.Color(102, 102, 102));
         jPanel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel15.setText("FOLIO N° CONTRATO");
@@ -102,6 +105,7 @@ GestionBD rl = new GestionBD();
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("GUARDAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,8 +113,10 @@ GestionBD rl = new GestionBD();
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setText("CANCELAR");
 
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("LIMPIAR");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +124,7 @@ GestionBD rl = new GestionBD();
             }
         });
 
+        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de Arrendador"));
 
         jLabel16.setText("RUT");
@@ -134,6 +141,7 @@ GestionBD rl = new GestionBD();
             }
         });
 
+        btncomprobarcli.setBackground(new java.awt.Color(102, 102, 102));
         btncomprobarcli.setText("Comprobar");
         btncomprobarcli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,10 +217,12 @@ GestionBD rl = new GestionBD();
                 .addContainerGap(110, Short.MAX_VALUE))
         );
 
+        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos del Vehiculo Solicitado"));
 
         jLabel26.setText("MOSTRAR VEHICULOS DISPONIBLES");
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ACEPTAR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,6 +246,7 @@ GestionBD rl = new GestionBD();
         jScrollPane1.setViewportView(tablaautocontrato);
         tablaautocontrato.getAccessibleContext().setAccessibleDescription("");
 
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("SELECCION DE VEHICULO");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -283,6 +294,7 @@ GestionBD rl = new GestionBD();
                 .addGap(19, 19, 19))
         );
 
+        jPanel4.setBackground(new java.awt.Color(102, 102, 102));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos del Contrato"));
 
         jLabel24.setText("FECHA DESDE");
@@ -293,6 +305,7 @@ GestionBD rl = new GestionBD();
 
         jLabel27.setText("VALOR DIA DE ARRIENDO");
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Obtener Valor");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -351,6 +364,7 @@ GestionBD rl = new GestionBD();
 
         jLabel29.setText("FECHA CONTRATO");
 
+        btnregresar.setBackground(new java.awt.Color(255, 255, 255));
         btnregresar.setText("REGRESAR");
         btnregresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -358,6 +372,7 @@ GestionBD rl = new GestionBD();
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setText("OBTENER FOLIO");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
