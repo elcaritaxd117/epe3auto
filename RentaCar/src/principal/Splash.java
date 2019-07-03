@@ -22,8 +22,10 @@ private ActionListener al;
             
             
             
+            
         @Override
         public void actionPerformed(ActionEvent e){
+            
             if(jProgressBar1.getValue() < 100){
                jProgressBar1.setValue(jProgressBar1.getValue()+5);
             }else{   
@@ -36,6 +38,7 @@ private ActionListener al;
              initComponents();
            // AWTUtilities.setWindowOpaque(this, false);
              t.start();//es para cuando da inicio carga la barra 
+             this.setLocationRelativeTo(null); //centrar formulario
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -49,12 +52,15 @@ private ActionListener al;
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 102, 102));
         setUndecorated(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
         });
+
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel2.setText("REMTACAR v1.0");
 
@@ -127,6 +133,7 @@ private ActionListener al;
 //         d.setVisible(true);
 //         this.dispose();
          login l = new login();
+         
          l.setLocationRelativeTo(null);
          l.setVisible(true);
          this.dispose();

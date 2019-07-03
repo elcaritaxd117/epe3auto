@@ -178,9 +178,13 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jPanel10.setBackground(new java.awt.Color(153, 153, 153));
+        jTab1.setBackground(new java.awt.Color(102, 102, 102));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+
+        jPanel10.setBackground(new java.awt.Color(102, 102, 102));
+
+        jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/coche.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,7 +192,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setBackground(new java.awt.Color(102, 102, 102));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/servidor.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,7 +200,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
+        jButton4.setBackground(new java.awt.Color(102, 102, 102));
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/transporte.png"))); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,7 +214,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel17.setText("             CONSULTAS");
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setBackground(new java.awt.Color(102, 102, 102));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/usuario.png"))); // NOI18N
 
         jLabel18.setText("Usuarios");
@@ -307,8 +311,12 @@ public class Principal extends javax.swing.JFrame {
 
         jTab1.addTab("CONTRATOS", jPanel1);
 
+        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+
+        jPanel4.setBackground(new java.awt.Color(102, 102, 102));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones"));
 
+        btnmostrartablacli.setBackground(new java.awt.Color(255, 255, 255));
         btnmostrartablacli.setText("Mostrar");
         btnmostrartablacli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -316,6 +324,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        rbingreso.setBackground(new java.awt.Color(102, 102, 102));
         GRUPO_RADIOBOTON.add(rbingreso);
         rbingreso.setText("INGRESAR");
         rbingreso.setToolTipText("");
@@ -325,6 +334,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        rbeliminar.setBackground(new java.awt.Color(102, 102, 102));
         GRUPO_RADIOBOTON.add(rbeliminar);
         rbeliminar.setText("ELIMINAR");
         rbeliminar.setToolTipText("");
@@ -334,6 +344,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        rbmodificar.setBackground(new java.awt.Color(102, 102, 102));
         GRUPO_RADIOBOTON.add(rbmodificar);
         rbmodificar.setText("MODIFICAR");
         rbmodificar.setToolTipText("");
@@ -372,6 +383,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel6.setBackground(new java.awt.Color(102, 102, 102));
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Ingreso datos de cliente"));
 
         jLabel1.setText("RUT");
@@ -386,6 +398,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel6.setText("CORREO");
 
+        btnlimpiarcli.setBackground(new java.awt.Color(255, 255, 255));
         btnlimpiarcli.setText("LIMPIAR");
         btnlimpiarcli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -393,6 +406,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btnaceptarcli.setBackground(new java.awt.Color(255, 255, 255));
         btnaceptarcli.setText("GUARDAR");
         btnaceptarcli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -400,6 +414,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btnguardacambio.setBackground(new java.awt.Color(255, 255, 255));
         btnguardacambio.setText("Guardar Cambios");
         btnguardacambio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -407,6 +422,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btnverificacli.setBackground(new java.awt.Color(255, 255, 255));
         btnverificacli.setText("Verificar");
         btnverificacli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -414,6 +430,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btnborrarcli.setBackground(new java.awt.Color(255, 255, 255));
         btnborrarcli.setText("BORRAR");
         btnborrarcli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -559,6 +576,9 @@ public class Principal extends javax.swing.JFrame {
 
         jTab1.addTab("CLIENTES", jPanel2);
 
+        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
+
+        jPanel8.setBackground(new java.awt.Color(102, 102, 102));
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Ingreso vehiculos"));
 
         jLabel7.setText("CATEGORIA DEL VEHICULO");
@@ -584,15 +604,19 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        check_sedan.setBackground(new java.awt.Color(102, 102, 102));
         GRUPO_CHECKBOX.add(check_sedan);
         check_sedan.setText("SEDAN");
 
+        check_jeep.setBackground(new java.awt.Color(102, 102, 102));
         GRUPO_CHECKBOX.add(check_jeep);
         check_jeep.setText("JEEP");
 
+        check_camioneta.setBackground(new java.awt.Color(102, 102, 102));
         GRUPO_CHECKBOX.add(check_camioneta);
         check_camioneta.setText("CAMIONETA");
 
+        btnlimpiarauto.setBackground(new java.awt.Color(255, 255, 255));
         btnlimpiarauto.setText("LIMPIAR");
         btnlimpiarauto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -600,6 +624,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btnguardaauto.setBackground(new java.awt.Color(255, 255, 255));
         btnguardaauto.setText("GUARDAR");
         btnguardaauto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -607,6 +632,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btverificavehiculo.setBackground(new java.awt.Color(255, 255, 255));
         btverificavehiculo.setText("Verifica");
         btverificavehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -614,6 +640,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btnborravehiculo.setBackground(new java.awt.Color(255, 255, 255));
         btnborravehiculo.setText("Borrar");
         btnborravehiculo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -621,6 +648,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        btnguardacambiosauto.setBackground(new java.awt.Color(255, 255, 255));
         btnguardacambiosauto.setText("GUARDAR CAMBIOS");
         btnguardacambiosauto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -764,8 +792,10 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel7.setBackground(new java.awt.Color(102, 102, 102));
         jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones"));
 
+        btnmostrartablauto.setBackground(new java.awt.Color(255, 255, 255));
         btnmostrartablauto.setText("Mostrar");
         btnmostrartablauto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -773,6 +803,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        rbingresoauto.setBackground(new java.awt.Color(102, 102, 102));
         GRUPO_RADIOBOTON.add(rbingresoauto);
         rbingresoauto.setText("INGRESAR");
         rbingresoauto.setToolTipText("");
@@ -782,6 +813,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        rbmodificarauto.setBackground(new java.awt.Color(102, 102, 102));
         GRUPO_RADIOBOTON.add(rbmodificarauto);
         rbmodificarauto.setText("MODIFICAR");
         rbmodificarauto.setToolTipText("");
@@ -791,6 +823,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        rbeliminarauto.setBackground(new java.awt.Color(102, 102, 102));
         GRUPO_RADIOBOTON.add(rbeliminarauto);
         rbeliminarauto.setText("ELIMINAR");
         rbeliminarauto.setToolTipText("");
@@ -1168,7 +1201,7 @@ public class Principal extends javax.swing.JFrame {
         btverificavehiculo.setVisible(false);
         btnborravehiculo.setVisible(false);
         btnguardaauto.setVisible(true);
-
+        btnlimpiarauto.setVisible(true);
     }//GEN-LAST:event_rbingresoautoActionPerformed
 
     private void rbeliminarautoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbeliminarautoActionPerformed

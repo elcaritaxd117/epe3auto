@@ -83,18 +83,22 @@ public class Devolucion extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 102, 102));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Devolución de Vehiculo"));
 
+        jPanel9.setBackground(new java.awt.Color(102, 102, 102));
         jPanel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel15.setText("FECHA DEVOLUCION");
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setText("GUARDAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +106,7 @@ public class Devolucion extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(255, 255, 255));
         jButton5.setText("LIMPIAR");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +114,7 @@ public class Devolucion extends javax.swing.JFrame {
             }
         });
 
+        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos del Vehiculo Arrendado"));
 
         jLabel22.setText("MARCA");
@@ -121,6 +127,7 @@ public class Devolucion extends javax.swing.JFrame {
 
         jLabel28.setText("COLOR");
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Comprobar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,6 +231,7 @@ public class Devolucion extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel4.setBackground(new java.awt.Color(102, 102, 102));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos del Contrato"));
 
         jLabel24.setText("FECHA DESDE");
@@ -234,6 +242,7 @@ public class Devolucion extends javax.swing.JFrame {
 
         jLabel30.setText("VALOR FINAL A CANCELAR");
 
+        jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setText("IMPRIMIR COMPROBANTE");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -290,6 +299,7 @@ public class Devolucion extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
+        jButton7.setBackground(new java.awt.Color(255, 255, 255));
         jButton7.setText("REGRESAR");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,6 +307,7 @@ public class Devolucion extends javax.swing.JFrame {
             }
         });
 
+        jPanel5.setBackground(new java.awt.Color(102, 102, 102));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de Arrendador"));
 
         jLabel20.setText("RUT");
