@@ -301,7 +301,7 @@ public class GestionBD {
                             "FECH_DESDE DATE NOT NULL,"+
                             "FECH_HASTA DATE NOT NULL,"+
                             "VALOR_FINAL INT  NOT NULL,"+
-                            "CONDICION INT  NOT NULL,"+
+                            "CONDICION TEXT  NOT NULL,"+
                             "FOREIGN KEY (RUT_CLI)REFERENCES CLIENTE(RUT),"+
                             "FOREIGN KEY (PPU_CLI)REFERENCES VEHICULO(PPU))";
                 sentencia.executeUpdate(sql);
@@ -717,6 +717,29 @@ public class GestionBD {
         }
 
  }
+    
+    
+    public void modificarEstadoContrato(String folio)  {
+      try {
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            
+            sentencia = conexion.createStatement();
+            String sql = " UPDATE CONTRATO SET CONDICION='CERRADO' WHERE FOLIO='"+folio+"' ";
+         
+            sentencia.executeUpdate(sql);
+            sentencia.close();
+            conexion.close();
+            JOptionPane.showMessageDialog(null,"ESTADO Modificado con Exito","Atención",JOptionPane.WARNING_MESSAGE);
+            
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Estado no existe en la BD","Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+ }  
+    
     public void  obtenerFolio( JTextField txtpr)  {
         try {
             Class.forName(DRIVER);
@@ -792,8 +815,6 @@ public class GestionBD {
 
  }  
     
-    
-    
      public void mostraDatoVehiculoUnico(JTextField marca,JTextField modelo,JTextField color,JTextField año,JTextField valordia,JComboBox comboestado,String PU)  {
         try {
             Class.forName(DRIVER);
@@ -821,9 +842,6 @@ public class GestionBD {
 
     }
 
-
-
-
     public void insertDEVOLUCION(String FOLIO_DEV, String PPU, String RUT_CLI, String FECHA_DEV)  {
       try {
             Class.forName(DRIVER);
@@ -847,7 +865,35 @@ public class GestionBD {
  }   
     
    
+public void mostrarContratoVigente(JTable jtable)  {
+        try {
+            Class.forName(DRIVER);
+            conexion = DriverManager.getConnection(URL);
+            sentencia = conexion.createStatement();
+            String sql = "SELECT * FROM CONTRATO JOIN CLIENTE ON CONTRATO.RUT_CLI=CLIENTE.RUT JOIN VEHICULO ON VEHICULO.PPU=CONTRATO.PPU_CLI  WHERE CONDICION ='VIGENTE'";
+            resultados = sentencia.executeQuery(sql);
+            int fila=0;
+            while(resultados.next()){
+                jtable.setValueAt(resultados.getString("FOLIO"), fila,0);
+                jtable.setValueAt(resultados.getString("FECHA_CONTRATO"), fila,1);
+                jtable.setValueAt(resultados.getString("RUT_CLI"), fila,2);
+                jtable.setValueAt(resultados.getString("NOMBRE"), fila,3);
+                jtable.setValueAt(resultados.getString("APELLIDO"), fila,4);
+                jtable.setValueAt(resultados.getString("MARCA"), fila,5);
+                jtable.setValueAt(resultados.getString("MODELO"), fila,6);
+                jtable.setValueAt(resultados.getString("PPU_CLI"), fila,7);
+                fila++;
+            }
+           
+            sentencia.close();
+            conexion.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
+        }
 
+    } 
 public void mostrarAUTOCATEGORIA(JTable jtableautos)  {
         try {
             Class.forName(DRIVER);

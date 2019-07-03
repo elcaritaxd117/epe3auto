@@ -531,6 +531,7 @@ public class Devolucion extends javax.swing.JFrame {
         rl.insertDEVOLUCION(foliod, ppud, rutd, fecd);
         String ess= "LIBRE";
         rl.modificarEstado(ppud, ess);
+        rl.modificarEstadoContrato(foliod);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

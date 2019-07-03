@@ -571,6 +571,10 @@ public class consultas extends javax.swing.JFrame {
 
     private void btnclienteauto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnclienteauto1ActionPerformed
         // TODO add your handling code here:
+
+            rl.mostrarContratoVigente(jTable1);
+
+
     }//GEN-LAST:event_btnclienteauto1ActionPerformed
 
     /**
