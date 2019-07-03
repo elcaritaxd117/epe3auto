@@ -20,7 +20,7 @@ public class consultas extends javax.swing.JFrame {
         
         
          this.setLocationRelativeTo(null); //centrar formulario
-         this.setTitle("Consultas");
+         this.setTitle("RENTACAR V1.0---> Consultas");
     }
 
     /** This method is called from within the constructor to

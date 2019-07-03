@@ -57,95 +57,237 @@ public class GestionBD {
         }
      
      System.out.println("BD creada de forma Exitosa!!!");
- }     
-    public void crearTablaCliente()  {
+ }   
+        public void crearTablaUsuarios()  {
         try {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
                 sentencia = (Statement) conexion.createStatement();
-                    String sql = "CREATE TABLE CLIENTE"+
-                            "(RUT TEXT  PRIMARY KEY NOT NULL,"+ 
-                            "NOMBRE    TEXT NOT NULL,"+  
-                            "APELLIDO  TEXT NOT NULL,"+
-                            "DIRECCION TEXT NOT NULL,"+
-                            "TELEFONO  INT  NOT NULL,"+
-                            "CORREO TEXT NOT NULL)";
+                    String sql = "CREATE TABLE USUARIOS"+
+                            "(USUARIO   INT  NOT NULL PRIMARY KEY ,"+ 
+                            "PASS BLOB NOT NULL)"; 
+                           
                 sentencia.executeUpdate(sql);
                 sentencia.close();
             conexion.close();
-            System.out.println("Tabla cliente creada");
-          
-            
-        } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("Error:"+ e.getMessage());
-        } 
- }    
-    public void crearTablaDEVOLUCION()  {
-        try {
-            Class.forName(DRIVER);
-            conexion = DriverManager.getConnection(URL);
-                sentencia = (Statement) conexion.createStatement();
-                    String sql = "CREATE TABLE DEVOLUCION"+
-                                "(FOLIO_DEV TEXT  PRIMARY KEY NOT NULL,"+ 
-                                "PPU       TEXT NOT NULL,"+  
-                                "RUT_CLI  TEXT NOT NULL,"+
-                                "FECHA_DEV TEXT NOT NULL)";
-                sentencia.executeUpdate(sql);
-                sentencia.close();
-            conexion.close();
-            System.out.println("Tabla DEVOLUCION creada");
+            System.out.println("Tabla USUARIOS creada EXITOSAMENTE");
           
             
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
         } 
  } 
-    public void crearTablaCategoriaVehiculo()  {
+        public void insertDatosUsuariosDefault()  {
+            try {
+                  Class.forName(DRIVER);
+                  conexion = DriverManager.getConnection(URL);
+
+                  sentencia = conexion.createStatement();
+                  String sql = "INSERT INTO USUARIOS"+
+                               "(USUARIO,PASS)"+
+                               "VALUES('Admin','Admin')";
+                  sentencia.executeUpdate(sql);
+                  sentencia.close();
+                  conexion.close();
+                //              JOptionPane.showMessageDialog (null, "Cliente ingresado", "Atencion", JOptionPane.WARNING_MESSAGE);
+
+
+              } catch (ClassNotFoundException | SQLException e) {
+                  System.out.println("Error:"+ e.getMessage());
+              //    JOptionPane.showMessageDialog(null,"Rut ya Existe en la BD vuelve a ingresar un Rut distinto","error",JOptionPane.ERROR_MESSAGE);   comentado para que no muetre el JOption de error
+              }
+
+ }    
+            public void insertDatosUsuarios(String us, String psw)  {
+            try {
+                  Class.forName(DRIVER);
+                  conexion = DriverManager.getConnection(URL);
+
+                  sentencia = conexion.createStatement();
+                  String sql = "INSERT INTO USUARIOS"+
+                               "(USUARIO,PASS)"+
+                               "VALUES('"+us+"','"+psw+"')";
+                  sentencia.executeUpdate(sql);
+                  sentencia.close();
+                  conexion.close();
+                  JOptionPane.showMessageDialog (null, "USUARIO CREADO CON EXITO...!!!", "Atencion", JOptionPane.WARNING_MESSAGE);
+
+
+              } catch (ClassNotFoundException | SQLException e) {
+                  System.out.println("Error:"+ e.getMessage());
+              //    JOptionPane.showMessageDialog(null,"Rut ya Existe en la BD vuelve a ingresar un Rut distinto","error",JOptionPane.ERROR_MESSAGE);   comentado para que no muetre el JOption de error
+              }
+
+ } 
+            public void modificarDatosUsuarios(String us, String psw)  {
+            try {
+                  Class.forName(DRIVER);
+                  conexion = DriverManager.getConnection(URL);
+
+                  sentencia = conexion.createStatement();
+                  String sql = "UPDATE USUARIOS SET PASS='"+psw+"' WHERE USUARIO='"+psw+"'";
+                              
+                  sentencia.executeUpdate(sql);
+                  sentencia.close();
+                  conexion.close();
+                  JOptionPane.showMessageDialog (null, "CONTRASEÑA ACTUALIZADA CON EXITO..!!", "Atencion", JOptionPane.WARNING_MESSAGE);
+
+
+              } catch (ClassNotFoundException | SQLException e) {
+                  System.out.println("Error:"+ e.getMessage());
+              //    JOptionPane.showMessageDialog(null,"Rut ya Existe en la BD vuelve a ingresar un Rut distinto","error",JOptionPane.ERROR_MESSAGE);   comentado para que no muetre el JOption de error
+              }
+
+ } 
+            public void eliminarDatosUsuarios(String us)  {
+            try {
+                  Class.forName(DRIVER);
+                  conexion = DriverManager.getConnection(URL);
+
+                  sentencia = conexion.createStatement();
+                    String sql = "DELETE FROM USUARIOS WHERE USUARIO='"+us+"'";
+                              
+                  sentencia.executeUpdate(sql);
+                  sentencia.close();
+                  conexion.close();
+                  JOptionPane.showMessageDialog (null, "USUARIO ELIMINADO CON EXITO..!!", "Atencion", JOptionPane.WARNING_MESSAGE);
+
+
+              } catch (ClassNotFoundException | SQLException e) {
+                  System.out.println("Error:"+ e.getMessage());
+              //    JOptionPane.showMessageDialog(null,"Rut ya Existe en la BD vuelve a ingresar un Rut distinto","error",JOptionPane.ERROR_MESSAGE);   comentado para que no muetre el JOption de error
+              }
+
+ }
+             public void mostraDatoUsuario(JTable jtable)  {
         try {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
-                sentencia = (Statement) conexion.createStatement();
-                    String sql = "CREATE TABLE CATEGORIA"+
-                            "(ID_CAT TEXT  PRIMARY KEY NOT NULL,"+ 
-                            "NOMBRE_CAT    TEXT NOT NULL)";
-                sentencia.executeUpdate(sql);
-                sentencia.close();
+            sentencia = conexion.createStatement();
+            String sql = "SELECT * FROM USUARIOS";
+            resultados = sentencia.executeQuery(sql);
+            int fila=0;
+            while(resultados.next()){
+                jtable.setValueAt(resultados.getString("USUARIO"), fila,0);
+                fila++;
+            }
+           
+            sentencia.close();
             conexion.close();
-            System.out.println("Tabla CATEGORIA creada");
-          
-            
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error:"+ e.getMessage());
-        } 
- }            
-    public void crearTablaVehiculo ()  {
-        try {
-            Class.forName(DRIVER);
-            conexion = DriverManager.getConnection(URL);
-                sentencia = (Statement) conexion.createStatement();
-                    String sql = "CREATE TABLE VEHICULO"+
-                            "(PPU TEXT PRIMARY KEY NOT NULL,"+ 
-                             "MARCA    TEXT NOT NULL,"+  
-                            "MODELO  TEXT NOT NULL,"+
-                            "COLOR TEXT NOT NULL,"+
-                            "AÑO  TEXT  NOT NULL,"+
-                            "VALORDIA INT NOT NULL,"+
-                            "ESTADO TEXT NOT NULL,"+
-                            "ID_CAT TEXT NOT NULL,"+
-                            "FOREIGN KEY(ID_CAT) REFERENCES CATEGORIA(ID_CAT))";
-                sentencia.executeUpdate(sql);
-                sentencia.close();
-            conexion.close();
-            System.out.println("Tabla VEHICULO creada");
-          
-            
-        } catch (ClassNotFoundException | SQLException e) {
-            System.out.println("Error:"+ e.getMessage());
+            JOptionPane.showMessageDialog(
+        null, "Error", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    
-     
- }   
-    public void crearTablaContrato ()  {
+
+    }       
+        public String LOGUEAR(String nombre){
+            String salida="";
+            try{
+                Class.forName(DRIVER);
+                conexion=DriverManager.getConnection(URL);
+                sentencia=conexion.createStatement();
+                String sql="SELECT * FROM USUARIOS WHERE USUARIO='"+nombre+"';";
+                ResultSet resultado= sentencia.executeQuery(sql);
+                salida=resultado.getString("USUARIO");
+                salida=salida+","+resultado.getString("PASS");
+                sentencia.close();
+                conexion.close();
+            }catch(ClassNotFoundException | SQLException e){
+                System.out.println("ERROR:"+e.getMessage());
+            }
+
+                System.out.println("consulta realizada!");
+                return salida;
+            }
+            public void crearTablaCliente()  {
+                try {
+                    Class.forName(DRIVER);
+                    conexion = DriverManager.getConnection(URL);
+                        sentencia = (Statement) conexion.createStatement();
+                            String sql = "CREATE TABLE CLIENTE"+
+                                    "(RUT TEXT  PRIMARY KEY NOT NULL,"+ 
+                                    "NOMBRE    TEXT NOT NULL,"+  
+                                    "APELLIDO  TEXT NOT NULL,"+
+                                    "DIRECCION TEXT NOT NULL,"+
+                                    "TELEFONO  INT  NOT NULL,"+
+                                    "CORREO TEXT NOT NULL)";
+                        sentencia.executeUpdate(sql);
+                        sentencia.close();
+                    conexion.close();
+                    System.out.println("Tabla cliente creada");
+
+
+                } catch (ClassNotFoundException | SQLException e) {
+                    System.out.println("Error:"+ e.getMessage());
+                } 
+         }    
+            public void crearTablaDEVOLUCION()  {
+                try {
+                    Class.forName(DRIVER);
+                    conexion = DriverManager.getConnection(URL);
+                        sentencia = (Statement) conexion.createStatement();
+                            String sql = "CREATE TABLE DEVOLUCION"+
+                                        "(FOLIO_DEV TEXT  PRIMARY KEY NOT NULL,"+ 
+                                        "PPU       TEXT NOT NULL,"+  
+                                        "RUT_CLI  TEXT NOT NULL,"+
+                                        "FECHA_DEV TEXT NOT NULL)";
+                        sentencia.executeUpdate(sql);
+                        sentencia.close();
+                    conexion.close();
+                    System.out.println("Tabla DEVOLUCION creada");
+
+
+                } catch (ClassNotFoundException | SQLException e) {
+                    System.out.println("Error:"+ e.getMessage());
+                } 
+         } 
+            public void crearTablaCategoriaVehiculo()  {
+                try {
+                    Class.forName(DRIVER);
+                    conexion = DriverManager.getConnection(URL);
+                        sentencia = (Statement) conexion.createStatement();
+                            String sql = "CREATE TABLE CATEGORIA"+
+                                    "(ID_CAT TEXT  PRIMARY KEY NOT NULL,"+ 
+                                    "NOMBRE_CAT    TEXT NOT NULL)";
+                        sentencia.executeUpdate(sql);
+                        sentencia.close();
+                    conexion.close();
+                    System.out.println("Tabla CATEGORIA creada");
+
+
+                } catch (ClassNotFoundException | SQLException e) {
+                    System.out.println("Error:"+ e.getMessage());
+                } 
+         }            
+            public void crearTablaVehiculo ()  {
+                try {
+                    Class.forName(DRIVER);
+                    conexion = DriverManager.getConnection(URL);
+                        sentencia = (Statement) conexion.createStatement();
+                            String sql = "CREATE TABLE VEHICULO"+
+                                    "(PPU TEXT PRIMARY KEY NOT NULL,"+ 
+                                     "MARCA    TEXT NOT NULL,"+  
+                                    "MODELO  TEXT NOT NULL,"+
+                                    "COLOR TEXT NOT NULL,"+
+                                    "AÑO  TEXT  NOT NULL,"+
+                                    "VALORDIA INT NOT NULL,"+
+                                    "ESTADO TEXT NOT NULL,"+
+                                    "CAT TEXT NOT NULL,"+
+                                    "FOREIGN KEY(CAT) REFERENCES CATEGORIA(ID_CAT))";
+                        sentencia.executeUpdate(sql);
+                        sentencia.close();
+                    conexion.close();
+                    System.out.println("Tabla VEHICULO creada");
+
+
+                } catch (ClassNotFoundException | SQLException e) {
+                    System.out.println("Error:"+ e.getMessage());
+                }
+
+
+         }   
+            public void crearTablaContrato ()  {
         try {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
@@ -297,11 +439,15 @@ public class GestionBD {
             
             sentencia = conexion.createStatement();
             String sql ="INSERT INTO CATEGORIA"+"(ID_CAT , NOMBRE_CAT)"+"VALUES('100','SEDAN')"; 
-            String sql2 ="INSERT INTO CATEGORIA"+"(ID_CAT , NOMBRE_CAT)"+"VALUES('200','JEEP')"; 
-            String sql3 ="INSERT INTO CATEGORIA"+"(ID_CAT , NOMBRE_CAT)"+"VALUES('300','CAMIONETA')"; 
-            sentencia.executeUpdate(sql);
-              sentencia.executeUpdate(sql2);
-                sentencia.executeUpdate(sql3);
+                   sentencia.executeUpdate(sql);
+            
+           
+                     sql = "INSERT INTO CATEGORIA"+"(ID_CAT , NOMBRE_CAT)"+"VALUES('200','JEEP')";
+                     sentencia.executeUpdate(sql);
+            
+                    sql ="INSERT INTO CATEGORIA"+"(ID_CAT , NOMBRE_CAT)"+"VALUES('300','CAMIONETA')"; 
+                   sentencia.executeUpdate(sql);
+            
             sentencia.close();
             conexion.close();
              System.out.println("insertado los datos de categoria correctamente");
@@ -332,15 +478,15 @@ public class GestionBD {
 */
  }    
     //------insert update delete mostrar tabla VEHICULO------//
-    public void insertDatoVehiculo(String PPU, String MARCA, String MODELO, String COLOR, String AÑO, int VALORDIA, String ESTADO, String ID_CAT)  {
+    public void insertDatoVehiculo(String PPU, String MARCA, String MODELO, String COLOR, String AÑO, int VALORDIA, String ESTADO, String CAT)  {
       try {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             
             sentencia = conexion.createStatement();
             String sql = "INSERT INTO VEHICULO"+
-                         "(PPU,MARCA,MODELO,COLOR,AÑO,VALORDIA,ESTADO,ID_CAT)"+
-                         "VALUES('"+PPU+"','"+MARCA+"','"+MODELO+"','"+COLOR+"','"+AÑO+"','"+VALORDIA+"','"+ESTADO+"','"+ID_CAT+"')";
+                         "(PPU,MARCA,MODELO,COLOR,AÑO,VALORDIA,ESTADO,CAT)"+
+                         "VALUES('"+PPU+"','"+MARCA+"','"+MODELO+"','"+COLOR+"','"+AÑO+"','"+VALORDIA+"','"+ESTADO+"','"+CAT+"')";
             sentencia.executeUpdate(sql);
             sentencia.close();
             conexion.close();
@@ -370,7 +516,7 @@ public class GestionBD {
                 jtableautos.setValueAt(resultados.getInt("AÑO"), fila,4);
                 jtableautos.setValueAt(resultados.getString("VALORDIA"), fila,5);
                 jtableautos.setValueAt(resultados.getString("ESTADO"), fila,6);
-                jtableautos.setValueAt(resultados.getString("ID_CAT"), fila,7);
+                jtableautos.setValueAt(resultados.getString("CAT"), fila,7);
                 fila++;
             }
            
@@ -417,13 +563,13 @@ public class GestionBD {
         }
 
     }
-    public void modificarDatoVehiculo(String PPU, String MARCA, String MODELO, String COLOR, String AÑO, int VALORDIA, String ESTADO, String ID_CAT)  {
+    public void modificarDatoVehiculo(String PPU, String MARCA, String MODELO, String COLOR, String AÑO, int VALORDIA, String ESTADO, String CAT)  {
       try {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             
             sentencia = conexion.createStatement();
-            String sql = "update VEHICULO set MARCA = '"+MARCA+"', MODELO = '"+MODELO+"', COLOR = '"+COLOR+"', AÑO = '"+AÑO+"',VALORDIA = '"+VALORDIA+"',ESTADO = '"+ESTADO+"',ID_CAT = '"+ID_CAT+"' where PPU = '"+PPU+"'";
+            String sql = "update VEHICULO set MARCA = '"+MARCA+"', MODELO = '"+MODELO+"', COLOR = '"+COLOR+"', AÑO = '"+AÑO+"',VALORDIA = '"+VALORDIA+"',ESTADO = '"+ESTADO+"',CAT = '"+CAT+"' where PPU = '"+PPU+"'";
          
             sentencia.executeUpdate(sql);
             sentencia.close();
@@ -486,7 +632,7 @@ public class GestionBD {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             sentencia = conexion.createStatement();
-            String sql = "SELECT  MARCA FROM VEHICULO JOIN CATEGORIA ON VEHICULO.ID_CAT=CATEGORIA.ID_CAT WHERE NOMBRE_CAT ='"+opanterior+"'";
+            String sql = "SELECT  MARCA FROM VEHICULO JOIN CATEGORIA ON VEHICULO.CAT=CATEGORIA.ID_CAT WHERE NOMBRE_CAT ='"+opanterior+"'";
             resultados = sentencia.executeQuery(sql);
             
             cbox2.addItem("Seleccione una opción de marca");
@@ -707,7 +853,7 @@ public void mostrarAUTOCATEGORIA(JTable jtableautos)  {
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL);
             sentencia = conexion.createStatement();
-            String sql = "SELECT * FROM VEHICULO JOIN CATEGORIA ON VEHICULO.ID_CAT= CATEGORIA.ID_CAT";
+            String sql = "SELECT * FROM VEHICULO JOIN CATEGORIA ON VEHICULO.CAT= CATEGORIA.ID_CAT";
             resultados = sentencia.executeQuery(sql);
             int fila=0;
             while(resultados.next()){

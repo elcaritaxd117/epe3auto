@@ -5,6 +5,7 @@
  */
 package principal;
 
+import gestionBD.GestionBD;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import metodos.Metodos;
@@ -15,14 +16,17 @@ import principal.Principal;
  * @author rls
  */
 public class login extends javax.swing.JFrame {
-
+       GestionBD rl = new GestionBD();
     /**
      * Creates new form login
      */
     public login() {
         initComponents();
+        rl.crearBD();
+        rl.crearTablaUsuarios();
+        rl.insertDatosUsuariosDefault();
          this.setLocationRelativeTo(null); //centrar formulario
-         this.setTitle("Ingrese sus datos");
+         this.setTitle("RENTACAR V1.0--->  Ingrese sus datos");
     }
 
     /**
@@ -61,6 +65,12 @@ public class login extends javax.swing.JFrame {
         btnentrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnentrarActionPerformed(evt);
+            }
+        });
+
+        txtpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpassActionPerformed(evt);
             }
         });
 
@@ -130,40 +140,46 @@ public class login extends javax.swing.JFrame {
 
     private void btnentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnentrarActionPerformed
         // TODO add your handling code here:
-        Metodos rl = new Metodos();
-        
+ 
+       
             String usu = txtusuario.getText();
          
             char[] arrayC = txtpass.getPassword(); 
             String pass = new String(arrayC); 
+    
+    
+            String x =rl.LOGUEAR(usu);                 //me devuelve el usuario y la contraseña en un string llamado x
+            String[] datos = x.split(",");
             
-         if (usu.equals("Admin") && pass.equals("12345")){
-
+     try {        
+                if(txtusuario.getText().equals("")){
+       JOptionPane.showMessageDialog(this,"Ingrese nombre usuario");
+    }else{
+    if(datos[0].equals(txtusuario.getText())){
+        if(txtpass.getText().equals(datos[1])){
             
-                dispose();
-
-                    this.dispose();
-
-
-                    JOptionPane.showMessageDialog(null, "Bienvenido\n"
-                    + "DISFRUTE SU SOFTWARE......",   "Mensaje de bienvenida",
-                    JOptionPane.INFORMATION_MESSAGE);
-
-
-                    Principal rls = new Principal();
-              
-                 rls.setVisible(true);
-
-
-            }else {
-
-
-                    JOptionPane.showMessageDialog(null, "Acceso denegado:\n"
+            Principal inicia = new Principal();
+            inicia.setVisible(true);
+            this.dispose();
+        }else {  JOptionPane.showMessageDialog(null, "Acceso denegado:\n"
+                    + "Por favor ingrese contraseña correcta", "Acceso denegado",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }else {
+            JOptionPane.showMessageDialog(null, "Acceso denegado:\n"
                     + "Por favor ingrese un usuario y/o contraseña correctos", "Acceso denegado",
                     JOptionPane.ERROR_MESSAGE);
-           
-
-            }
+    }
+    
+ 
+                        
+                        }
+            
+                }    catch ( Exception e){
+                JOptionPane.showMessageDialog(null, "Error"+e);
+                
+                }
+            
 
 
     }//GEN-LAST:event_btnentrarActionPerformed
@@ -172,6 +188,10 @@ public class login extends javax.swing.JFrame {
 ImageIcon favicon = new ImageIcon("src/car-favicon.png");         
         setIconImage(favicon.getImage());        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
+
+    private void txtpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtpassActionPerformed
 
     /**
      * @param args the command line arguments

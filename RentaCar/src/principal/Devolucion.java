@@ -20,7 +20,7 @@ public class Devolucion extends javax.swing.JFrame {
     public Devolucion() {
         initComponents();
            this.setLocationRelativeTo(null); //centrar formulario
-           this.setTitle("Devolucion");
+           this.setTitle("RENTACAR V1.0---> Devolucion");
            jPanel4.setVisible(false);
     }
 
@@ -294,7 +294,7 @@ public class Devolucion extends javax.swing.JFrame {
                             .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())))
         );
@@ -405,14 +405,13 @@ public class Devolucion extends javax.swing.JFrame {
                             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
@@ -430,13 +429,13 @@ public class Devolucion extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -446,13 +445,11 @@ public class Devolucion extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 15, Short.MAX_VALUE))
+            .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -475,12 +472,21 @@ public class Devolucion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+    ImageIcon favicon = new ImageIcon("src/car-favicon.png");         
+        setIconImage(favicon.getImage());        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowActivated
+
+    private void nombredevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombredevoActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombredevoActionPerformed
+
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         Principal rl = new Principal();
         rl.setVisible(true);
         dispose();
-
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void combodevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combodevoActionPerformed
@@ -494,52 +500,38 @@ public class Devolucion extends javax.swing.JFrame {
         String patente = ppudevo.getText();
 
         rl.mostraDatoVehiculoUnicoDEVO(marcadevo,modelodevo, colordevo, añodevo, valordiadevo, combodevo,foliodevo,rutdevo,nombredevo,apellidodevo,direcciondevo,telefonodevo,correodevo, patente);
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void nombredevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombredevoActionPerformed
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombredevoActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        ppudevo.setText("");
+        marcadevo.setText("");
+        modelodevo.setText("");
+        fechadevo.setToolTipText("");
+        colordevo.setText("");
+        añodevo.setText("");
+        valordiadevo.setText("");
+        foliodevo.setText("");
+        rutdevo.setText("");
+        nombredevo.setText("");
+        apellidodevo.setText("");
+        direcciondevo.setText("");
+        telefonodevo.setText("");
+        correodevo.setText("");
+        jTextField16.setText("");
+        jTextField17.setText("");
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-         GestionBD rl = new GestionBD();
-         String foliod= foliodevo.getText();
-         String ppud= ppudevo.getText();
-         String rutd= rutdevo.getText();
-         String fecd= fechadevo.getDate().toString();
-         rl.insertDEVOLUCION(foliod, ppud, rutd, fecd);
-         String ess= "LIBRE";
-         rl.modificarEstado(ppud, ess);
-
-
+        GestionBD rl = new GestionBD();
+        String foliod= foliodevo.getText();
+        String ppud= ppudevo.getText();
+        String rutd= rutdevo.getText();
+        String fecd= fechadevo.getDate().toString();
+        rl.insertDEVOLUCION(foliod, ppud, rutd, fecd);
+        String ess= "LIBRE";
+        rl.modificarEstado(ppud, ess);
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       ppudevo.setText("");
-       marcadevo.setText("");
-       modelodevo.setText("");
-       fechadevo.setToolTipText("");
-       colordevo.setText("");
-       añodevo.setText("");
-       valordiadevo.setText("");
-       foliodevo.setText("");
-       rutdevo.setText("");
-       nombredevo.setText("");
-       apellidodevo.setText("");
-       direcciondevo.setText("");
-       telefonodevo.setText("");
-       correodevo.setText("");
-       jTextField16.setText("");
-       jTextField17.setText("");
-       
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-    ImageIcon favicon = new ImageIcon("src/car-favicon.png");         
-        setIconImage(favicon.getImage());        // TODO add your handling code here:
-    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
