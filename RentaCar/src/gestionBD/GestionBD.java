@@ -125,7 +125,7 @@ public class GestionBD {
                   conexion = DriverManager.getConnection(URL);
 
                   sentencia = conexion.createStatement();
-                  String sql = "UPDATE USUARIOS SET PASS='"+psw+"' WHERE USUARIO='"+psw+"'";
+                  String sql = "UPDATE USUARIOS SET PASS='"+psw+"' WHERE USUARIO='"+us+"'";
                               
                   sentencia.executeUpdate(sql);
                   sentencia.close();
